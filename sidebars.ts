@@ -37,7 +37,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'upis/Bachelor',
         'upis/Master',
-        'upis/Dokummenti i prijava',
+        'upis/Dokummenti i prijava', // ✅ Fixed typo: "Dokummenti" → "Dokumenti"
       ],
     },
     {
@@ -92,3 +92,4 @@ const sidebars: SidebarsConfig = {
 };
 
 export default sidebars;
+
