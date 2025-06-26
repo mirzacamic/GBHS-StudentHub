@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2421],{2949:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/GBHS-StudentHub/news","page":1,"postsPerPage":5,"totalPages":1,"totalCount":4,"blogDescription":"Najnovije informacije i obavijesti za studente u Grazu.","blogTitle":"Novosti i Obavijesti"}}')}}]);
