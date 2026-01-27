@@ -1,99 +1,210 @@
-:root {
-  --card-bg-light: #f9f9f9;
-  --card-bg-dark: #1e1e1e;
-  --card-border-light: #e0e0e0;
-  --card-border-dark: #333333;
-  --card-text-light: #222;
-  --card-text-dark: #ddd;
+.homeContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero {
-  padding: 2rem;
-  max-width: 1200px;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, #0c3c8066, transparent),
+    var(--ifm-background-color);
+  border-bottom: 1px solid #222b38;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.heroInner {
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  color: var(--ifm-font-color-secondary);
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.searchContainer {
   margin: 0 auto;
-}
-
-.intro {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.search {
-  text-align: center;
-  margin-bottom: 1.5rem;
+  max-width: 600px;
+  width: 100%;
 }
 
 .searchInput {
-  padding: 0.7rem 1rem;
-  width: 80%;
-  max-width: 500px;
-  font-size: 1rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 0.5rem;
-  background-color: var(--ifm-background-color);
+  background-color: var(--ifm-background-surface-color);
+  border: 1px solid #30363d;
+  border-radius: var(--ifm-card-border-radius);
   color: var(--ifm-font-color-base);
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  transition: 0.2s ease-in-out;
+  width: 100%;
+}
+
+.searchInput:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 135, 242, 0.3);
+  outline: 0;
+}
+
+.searchInput::placeholder {
+  color: var(--ifm-font-color-secondary);
 }
 
 .cards {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  margin-top: 2rem;
+  gap: 1.2rem;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1420px;
+  padding: 3rem 1.5rem;
+  width: 100%;
 }
 
 .card {
-  background-color: var(--card-bg-light);
-  border: 1px solid var(--card-border-light);
-  color: var(--card-text-light);
-  border-radius: 1rem;
+  background-color: transparent;
+  border: 1px solid #30363d;
+  border-radius: var(--ifm-card-border-radius);
+  color: inherit;
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem;
-  text-align: left;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-}
-
-html[data-theme='dark'] .card {
-  background-color: var(--card-bg-dark);
-  border: 1px solid var(--card-border-dark);
-  color: var(--card-text-dark);
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
 }
 
 .card:hover {
-  transform: translateY(-5px);
   border-color: var(--ifm-color-primary);
+  text-decoration: none;
 }
 
-.card h3 {
+.cardIcon {
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  color: var(--ifm-font-color-base);
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  font-weight: 600;
 }
 
-.card p {
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+.cardDesc {
+  color: var(--ifm-font-color-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
+.latestNewsSection {
+  background-color: var(--ifm-background-color);
+  border-top: 1px solid #222b38;
+  max-width: 1420px;
+  padding: 3rem 1.5rem;
+  width: 100%;
+}
 
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-/* 
-.heroBanner {
-  padding: 4rem 0;
+.latestNewsContainer {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.latestNewsTitle {
+  color: var(--ifm-font-color-base);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
   text-align: center;
-  position: relative;
-  overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.newsItem {
+  border-bottom: 1px dashed var(--ifm-color-emphasis-200);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.newsItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.newsLink {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.newsLink:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.newsDate {
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.newsPostTitle {
+  color: var(--ifm-font-color-base);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.viewAllNewsButton {
+  background-color: var(--ifm-color-primary);
+  border-radius: var(--ifm-button-border-radius);
+  color: var(--ifm-color-white);
+  display: block;
+  font-weight: 700;
+  margin: 2rem auto 0;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+  width: fit-content;
+}
+
+.viewAllNewsButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-white);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards,
+  .latestNewsSection {
+    padding: 2rem 1rem;
+  }
+
+  .latestNewsTitle {
+    font-size: 1.75rem;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

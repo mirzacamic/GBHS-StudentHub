@@ -46,6 +46,7 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
+          routeBasePath: 'news',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -82,7 +83,7 @@ const config: Config = {
           position: 'left',
           label: 'Baza znanja',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/news', label: 'Novosti', position: 'left'},
         {
           href: 'https://github.com/mirzacamic/GBHS-StudentHub/tree/main/docs',
           label: 'GitHub',
@@ -101,8 +102,8 @@ const config: Config = {
               to: '/docs/intro',
             },
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Novosti',
+              to: '/news',
             },
           ],
         },
@@ -127,8 +128,8 @@ const config: Config = {
           title: 'Više',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Novosti',
+              to: '/news',
             },
             {
               label: 'GitHub',
