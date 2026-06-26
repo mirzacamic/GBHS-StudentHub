@@ -208,3 +208,147 @@
     grid-template-columns: 1fr;
   }
 }
+
+.phases {
+  margin: 0 auto;
+  max-width: 1420px;
+  padding: 1.5rem 1.5rem 3rem;
+  width: 100%;
+}
+
+.phase {
+  margin-top: 2.75rem;
+}
+
+.phase:first-child {
+  margin-top: 1rem;
+}
+
+.phaseHeader {
+  border-bottom: 1px solid #222b38;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.8rem;
+}
+
+.phaseTitle {
+  align-items: center;
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 700;
+  gap: 0.7rem;
+  margin-bottom: 0.3rem;
+}
+
+.phaseNum {
+  align-items: center;
+  background-color: var(--ifm-color-primary);
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 1rem;
+  height: 1.9rem;
+  justify-content: center;
+  width: 1.9rem;
+}
+
+.phaseDesc {
+  color: var(--ifm-font-color-secondary);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.phaseGrid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 996px) {
+  .phaseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .phaseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.phases {
+  margin: 0 auto;
+  max-width: 1420px;
+  padding: 1.5rem 1.5rem 3rem;
+  width: 100%;
+}
+
+.phase {
+  margin-top: 2.5rem;
+}
+
+.phase:first-child {
+  margin-top: 1rem;
+}
+
+.phaseHeader {
+  border-bottom: 1px solid #222b38;
+  margin-bottom: 1.3rem;
+  padding-bottom: 0.7rem;
+}
+
+.phaseTitle {
+  align-items: center;
+  display: flex;
+  font-size: 1.35rem;
+  font-weight: 700;
+  gap: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.phaseNum {
+  align-items: center;
+  background-color: var(--ifm-color-primary);
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  height: 1.6rem;
+  width: 1.6rem;
+  justify-content: center;
+}
+
+.phaseDesc {
+  color: var(--ifm-font-color-secondary);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.phaseGrid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.bannerCard {
+  align-items: center;
+  border: 1px solid #30363d;
+  border-radius: var(--ifm-card-border-radius);
+  color: inherit;
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.bannerCard:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.bannerIcon {
+  color: var(--ifm-color-primary);
+  flex-shrink: 0;
+}
